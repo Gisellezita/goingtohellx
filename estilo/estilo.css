@@ -99,3 +99,11 @@ h1 {
     transform: translate(2px, 2px);
     }
   }
+
+@media (max-width: 768px) {
+  /* Estilos para dispositivos móveis */
+}
+
+@media (min-width: 769px) {
+  /* Estilos para desktops */
+}
