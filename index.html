@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="estilo/estilo.css">
+  <title>Contagem Regressiva</title>
+</head>
+<body>
+  <h1>Going to hell in...</h1>
+  <div id="countdown"></div>
+
+  <script>
+    // Data final da contagem regressiva (exemplo: 31 de dezembro de 2023)
+    const endDate = new Date('June 16, 2023 21:00:00').getTime();
+
+    // Função para atualizar a contagem regressiva a cada segundo
+    const countdown = setInterval(() => {
+      const now = new Date().getTime();
+      const timeLeft = endDate - now;
+
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+      document.getElementById('countdown').innerHTML =
+        '<div>' + days + ' : </div>' +
+        '<div>' + hours + ' : </div>' +
+        '<div>' + minutes + ' : </div>' +
+        '<div>' + seconds + '  </div>';
+
+      // Quando a contagem regressiva terminar
+      if (timeLeft < 0) {
+        clearInterval(countdown);
+        document.getElementById('countdown').innerHTML = "Contagem regressiva encerrada!";
+      }
+    }, 1000);
+
+    function redirecionar() {
+      var resposta = prompt("Do you want to go to eternal damnation?");
+      if (resposta === "yes" || resposta === "sim") {
+        window.location.href = "https://www.instagram.com/etern4ldamnati0nHELLX";
+      }
+    }
+
+  </script>
+
+  <div class="instagram-icon">
+  <a href="https://www.instagram.com/gisellezitaa" target="_blank">
+  <img src="imagens/instagram.icon.png" id="icone" alt="Ícone do Instagram">
+  </div>
+
+  <button class="glitch-button" onclick="redirecionar()">Go to eternal damnation?</button>
+
+</body>
+</html>

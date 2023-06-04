@@ -1,0 +1,101 @@
+body {
+background: linear-gradient(to bottom, #ff0000, #ff5f5f);
+color: white;
+font-family: 'Poppins', sans-serif;
+text-align: center;
+padding-top: 100px;
+}
+
+#countdown {
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 100px;
+}
+
+#countdown > div {
+margin: 0 10px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.instagram-icon {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 50px;      
+    transition: background-color 1s linear;
+}
+  
+#icone {
+    width: 50px;
+    height: 50px;
+    align-items: center;
+}
+
+.glitch-button {
+    display: inline-block;
+    border-radius: 10%;
+    font-family: 'Poppins', sans-serif;
+    background-color: red;
+    color: white;
+    padding: 10px auto;
+    font-size: 16px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.glitch-button::before, .glitch-button::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translate(2px, 2px);
+}
+
+.glitch-button::before {
+    color: rgba(0, 0, 0, 0.75);
+    z-index: -1;
+}
+
+.glitch-button::after {
+    color: rgba(255, 255, 255, 0.75);
+    z-index: 1;
+}
+
+.glitch-button:hover {
+    transform: scale(1.05);
+}
+
+.glitch-button:hover::before, .glitch-button:hover::after {
+    animation: glitch 0.3s infinite;
+}
+
+@keyframes glitch {
+    0% {
+    transform: translate(2px, 2px);
+    }
+    25% {
+    transform: translate(-2px, -2px);
+    }
+    50% {
+    transform: translate(-2px, 2px);
+    }
+    75% {
+    transform: translate(2px, -2px);
+    }
+    100% {
+    transform: translate(2px, 2px);
+    }
+  }
